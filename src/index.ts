@@ -1,4 +1,4 @@
-import 'cross-fetch/polyfill'
+import fetch from 'cross-fetch'
 
 import {
   InitOptions,
@@ -66,6 +66,14 @@ export class createClient {
 
     if (response.status === 204)
       return response.text()
+
+    if (response.status >= 400)
+      throw {
+        statusCode: response.status,
+        body: {
+          message: response.statusText
+        }
+      }
 
     const json = await response.json()
 
