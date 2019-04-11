@@ -3,18 +3,21 @@ import fetch from 'cross-fetch'
 import {
   InitOptions,
   Options,
-  Headers
+  Headers,
+  Fetch
 } from './types'
 import { removeLeadingSlash } from './utils'
 
 export class createClient {
   private client_secret: string
   private options?: Options
+  private fetch?: Fetch
 
   constructor(options: InitOptions) {
     const { client_secret, ...others } = options
 
     this.client_secret = client_secret
+    this.fetch = options.fetch ? options.fetch : fetch
     this.options = {
       host: options.host ? options.host : 'api.shipengine.com',
       version: options.version ? options.version : 'v1',
@@ -58,7 +61,7 @@ export class createClient {
       ? data
       : { body: JSON.stringify({ data }) }
 
-    const response = await fetch(uri, {
+    const response = await this.fetch(uri, {
       method,
       headers,
       ...(data && body)

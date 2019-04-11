@@ -1,5 +1,6 @@
 export interface InitOptions {
   client_secret: string
+  fetch?: Fetch
   version?: string
   application?: string
   currency?: string
@@ -8,6 +9,7 @@ export interface InitOptions {
 }
 
 export interface Options {
+  fetch?: Fetch
   application?: string
   currency?: string
   host?: string
@@ -17,4 +19,8 @@ export interface Options {
 
 export interface Headers {
   [key: string]: string
+}
+
+export interface Fetch {
+  (input?: Request | string, init?: RequestInit): Promise<Response>
 }
