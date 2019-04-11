@@ -129,7 +129,7 @@ This argument can be used to get products by enabled currency, language or even 
 const { createClient } = require('@particular/shipengine-request')
 
 const shipEngine = new createClient({
-  client_id: '...'
+  client_secret: '...'
 })
 
 const headers = {
