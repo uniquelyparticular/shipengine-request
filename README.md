@@ -7,14 +7,14 @@
 ## Installation
 
 ```bash
-yarn add @particular/shipengine-request # npm install @particular/shipengine-request
+yarn add @particular./shipengine-request # npm install @particular./shipengine-request
 ```
 
 ## Quickstart (implicit)
 
 ```js
-const { createClient } = require('@particular/shipengine-request')
-// import { createClient } from '@particular/shipengine-request'
+const { createClient } = require('@particular./shipengine-request')
+// import { createClient } from '@particular./shipengine-request'
 
 const shipEngine = new createClient({
   client_secret: '...'
@@ -101,7 +101,7 @@ shipEngine
 ## Kitchen sink
 
 ```js
-const { createClient } = require('@particular/shipengine-request')
+const { createClient } = require('@particular./shipengine-request')
 
 const shipEngine = new createClient({
     client_secret: '...',
@@ -126,7 +126,7 @@ This argument can be used to get products by enabled currency, language or even 
 **Note**: If you add the `Content-Type` custom header to `post`, `patch`, `put` or `delete` you will need to encode `data` yourself.
 
 ```js
-const { createClient } = require('@particular/shipengine-request')
+const { createClient } = require('@particular./shipengine-request')
 
 const shipEngine = new createClient({
   client_secret: '...'
