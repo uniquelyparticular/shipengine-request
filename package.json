@@ -1,0 +1,45 @@
+{
+  "name": "@particular./shipengine-request",
+  "version": "0.0.0-semantic-release",
+  "author": "Adam Grohs <info@uniquelyparticular.com> (https://uniquelyparticular.com)",
+  "owner": "Particular.",
+  "description": "Please contact Particular. via info@uniquelyparticular.com for any questions",
+  "homepage": "https://github.com/uniquelyparticular/shipengine-request#readme",
+  "repository": "github:uniquelyparticular/shipengine-request",
+  "keywords": [
+    "shipengine",
+    "api",
+    "node",
+    "javascript",
+    "particular",
+    "particular."
+  ],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn clean && tsc -d",
+    "clean": "rimraf dist",
+    "test": "jest",
+    "semantic-release": "semantic-release"
+  },
+  "dependencies": {
+    "cross-fetch": "3.0.2"
+  },
+  "devDependencies": {
+    "@types/fetch-mock": "7.2.3",
+    "@types/jest": "24.0.11",
+    "fetch-mock": "7.3.1",
+    "jest": "24.7.1",
+    "rimraf": "2.6.3",
+    "semantic-release": "^15.13.8",
+    "ts-jest": "24.0.2",
+    "typescript": "3.4.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
