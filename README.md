@@ -70,7 +70,7 @@ shipEngine
             city_locality: 'BURBANK',
             state_province: 'CA',
             postal_code: '91521-0001',
-            country_code: 'US"
+            country_code: 'US'
         },
         // ...
         insurance_provider: 'none',
