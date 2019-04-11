@@ -117,11 +117,11 @@ const shipEngine = new createClient({
 
 ## Custom headers per request
 
-The Moltin API provides you the ability to send various request headers that change the way data is stored or retrieved.
+The API provides you the ability to send various request headers that change the way data is stored or retrieved.
 
 By default this library will encode all data as JSON, however you can customise this by setting your own `Content-Type` header as an additional argument to `get`, `post`, `patch`, `put` and `delete`.
 
-This argument can be used to get products by enabled currency, language or even use for uploading files to Moltin.
+This argument can be used to get products by enabled currency, language or even use for uploading files to ShipEngine.
 
 **Note**: If you add the `Content-Type` custom header to `post`, `patch`, `put` or `delete` you will need to encode `data` yourself.
 
