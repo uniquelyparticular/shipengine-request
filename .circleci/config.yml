@@ -42,8 +42,7 @@ workflows:
       - release:
           filters:
             branches:
-              only:
-                - release
-                - /rc-.*/
+              only: 
+                - master
           requires:
             - test
