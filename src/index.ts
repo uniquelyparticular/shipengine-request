@@ -59,7 +59,7 @@ export class createClient {
 
     const body = customHeaders['Content-Type']
       ? data
-      : { body: JSON.stringify({ data }) }
+      : { body: JSON.stringify({ ...data }) }
 
     const response = await this.fetch(uri, {
       method,
@@ -91,6 +91,8 @@ export class createClient {
   }
 
   post(path: string, data: object, headers?: Headers) {
+    console.log('!!path', path)
+    console.log('!!data', data)
     return this.request('POST', path, data, headers)
   }
 
