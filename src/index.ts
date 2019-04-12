@@ -49,8 +49,9 @@ export class createClient {
     }
 
     const headers: Headers = {
-      'api-key': this.client_secret,
       'Content-Type': 'application/json',
+      'api-key': this.client_secret,
+      'X-API-KEY': this.client_secret,
       'X-SHIPENGINE-SDK-LANGUAGE': 'JS-REQUEST',
       ...(application && { 'X-SHIPENGINE-APPLICATION': application }),
       ...(currency && { 'X-SHIPENGINE-CURRENCY': currency }),
