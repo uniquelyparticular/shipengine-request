@@ -22,10 +22,6 @@ jobs:
       - run: yarn build
       - run: yarn test
   release:
-    branches:
-      only:
-        - release
-        - /rc-.*/
     docker:
       - image: 'circleci/node:latest'
     steps:
@@ -46,6 +42,8 @@ workflows:
       - release:
           filters:
             branches:
-              only: master
+              only:
+                - release
+                - /rc-.*/
           requires:
             - test
