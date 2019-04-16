@@ -1,7 +1,9 @@
 import { removeLeadingSlash } from './utils'
 
-it('leading slash is removed', () => {
-  const string = '/test'
+describe('ShipEngine utils', () => {
+  it('leading slash is removed', () => {
+    const string = '/test'
 
-  expect(removeLeadingSlash(string)).toEqual('test')
+    expect(removeLeadingSlash(string)).toEqual('test')
+  })
 })
