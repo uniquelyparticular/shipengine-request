@@ -11,7 +11,7 @@ import { removeLeadingSlash } from './utils'
 export class createClient {
   private client_secret: string
   private options?: Options
-  private fetch?: Fetch
+  public fetch?: Fetch
 
   constructor(options: InitOptions) {
     const { client_secret, ...others } = options
