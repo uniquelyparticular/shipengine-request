@@ -38,19 +38,19 @@
     "cross-fetch": "3.0.3"
   },
   "devDependencies": {
-    "@types/fetch-mock": "7.3.0",
+    "@types/fetch-mock": "7.3.3",
     "@types/jest": "24.0.13",
-    "chai": "4.2.0",
+    "chai": "4.3.4",
     "fetch-everywhere": "1.0.5",
     "fetch-mock": "7.3.3",
     "husky": "2.4.0",
     "jest": "24.8.0",
     "prettier": "1.17.1",
-    "pretty-quick": "1.11.0",
+    "pretty-quick": "1.11.1",
     "rimraf": "2.6.3",
-    "semantic-release": "15.13.15",
+    "semantic-release": "15.14.0",
     "ts-jest": "24.0.2",
-    "typescript": "3.5.1"
+    "typescript": "3.9.10"
   },
   "publishConfig": {
     "access": "public"
